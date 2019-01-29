@@ -9,7 +9,9 @@
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
+
+  </div>
   <script type="text/babel">
     class App extends React.Component {
       state = {
@@ -26,6 +28,8 @@
       handleCopy(e){
         console.log('Try being original for once');
       }
+
+      // render method atleast this must be included in the component.
       render(){
         return(
           <div className="app-content">
