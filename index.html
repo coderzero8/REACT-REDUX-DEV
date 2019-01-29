@@ -13,14 +13,16 @@
 
   </div>
   <script type="text/babel">
-    class App extends React.Component {
-      state = {
-        name: 'Ryu',
+    class App extends React.Component { // class component 
+      state = {  // object
+        name: 'Ryu', // properties
         age: 30
       }
+
       handleMouseOver(e){
         console.log(e.target, e.pageX);
       }
+
       handleClick(e){
         console.log(e.target);
         // console.log(this.state); --> will not work, see next video
