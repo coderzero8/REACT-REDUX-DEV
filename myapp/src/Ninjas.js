@@ -1,33 +1,20 @@
 import React from 'react'
-
-const Ninjas = ({ninjas}) => {
-
-  // const { ninjas } = this.props;
-  // const ninjaList = ninjas.map(ninja => {
-  //   if (ninja.age > 20){
-  //     return (
-  //       <div className="ninja" key={ninja.id}>
-  //         <div>Name: { ninja.name }</div>
-  //         <div>Age: { ninja.age }</div>
-  //         <div>Belt: { ninja.belt }</div>
-  //       </div>
-  //     )
-  //   } else {
-  //     return null
-  //   }
-  // });
+//functional component 
+const Ninjas = ({ninjas,prop_deleteninja}) => { //functional component vs class based component
 
   return (
-    <div className="ninja-list">
-      { 
+    <div className="ninja-list" >
+      { // braces for adding javascripts
+       
         ninjas.map(ninja => {
-          return ninja.age > 20 ? (
+          return  (
             <div className="ninja" key={ninja.id}>
               <div>Name: { ninja.name }</div>
               <div>Age: { ninja.age }</div>
               <div>Belt: { ninja.belt }</div>
+              <button onClick={() =>{prop_deleteninja(ninja.id)}}>Delete </button>
             </div>
-          ) : null
+          ) 
         })
       }
     </div>
@@ -36,3 +23,13 @@ const Ninjas = ({ninjas}) => {
 }
 
 export default Ninjas
+ {/* ninjas.map(ninja => {
+          return ninja.age > 26 ? (
+            <div className="ninja" key={ninja.id}>
+              <div>Name: { ninja.name }</div>
+              <div>Age: { ninja.age }</div>
+              <div>Belt: { ninja.belt }</div>
+    
+            </div>
+          ) : null
+        }) */}
