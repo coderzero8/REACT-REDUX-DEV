@@ -2,7 +2,7 @@
 
 # dependencies
 /todoapp/node_modules
-
+/myapp/node_modules
 # testing
 /todoapp/coverage
 
