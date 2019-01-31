@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import fc_todos, { Component } from './fc_todos';
+import fc_todos from './fc_todos';
 // class based component
 class App extends Component {
   state = {
-    todo: [ //property array
+    todos: [ //property array
       {id:1, content:"buy some milk"},
       {id:2, content:"play mario cart"},
     ]
@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="center blue-text">Todo's</h1>  
-          <fc_todos todos={this.state.todos} />
+          <fc_todos prop_todos={this.state.todos} />
       </div>
     );
   }

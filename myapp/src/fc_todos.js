@@ -1,9 +1,9 @@
 import React from 'react'
 
-const fc_todos = () => {
+const fc_todos = ({prop_todos}) => {
 
-    const todoList = todos.length ?(
-        todos.map(todo=>{
+    const todoList = prop_todos.length ?(
+        prop_todos.map(todo => {
             return(
                 <div className="colletion-item" key={todo.id}>
                     <span>{todo.content}</span>
